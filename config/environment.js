@@ -6,7 +6,19 @@ module.exports = function(environment) {
     modulePrefix: 'embertask',
     environment,
     rootURL: '/',
+    //contentSecurityPolicy:{'connect-src':"'self' wss://*.firebaseio.com "},
+    contentSecurityPolicy: {
+    'script-src': "'self' 'unsafe-eval' apis.google.com",
+    'frame-src': "'self' https://*.firebaseapp.com",
+    'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+  },
+
     locationType: 'auto',
+    firebase: {
+    apiKey: "AIzaSyCuH5Sq3b6iOiR4kDa9ZhhtC25E_ZBMZZg",
+    authDomain: "embertaskmanager-48f5a.firebaseapp.com",
+    databaseURL: 'https://embertaskmanager-48f5a.firebaseio.com/',
+  },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
