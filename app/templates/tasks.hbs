@@ -2,8 +2,8 @@
 <h1>Tareas</h1>
 {{#each model as |task|}}
   <div class="well">
-    <h1>Hola</h1>
-    <h4>{{task.title}}</h4>
+    <h3><strong>{{task.title}}</strong></h3>
     <p>{{task.description}}</p>
+    <small><em>Realizar tarea antes de :</em>{{format-date task.date}}</small>
   </div>
 {{/each}}
